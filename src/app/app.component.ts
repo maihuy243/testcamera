@@ -35,7 +35,8 @@ export class AppComponent {
     }
 
     if(this.callbackUrl){
-      window.open(this.callbackUrl);
+      const random = Math.random().toFixed(5)
+      window.open(this.callbackUrl + `?ramdom=${random}`);
     }
   }
 }
