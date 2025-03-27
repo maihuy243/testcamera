@@ -13,6 +13,7 @@ export class AppComponent {
   callbackUrl: string = '';
   constructor(private router: ActivatedRoute) {
     this.router.queryParams.subscribe((params: any) => {
+      console.log('params ____',params);
       const callback = params?.callback;
       const timeout = params?.timeout;
       if (timeout) {
