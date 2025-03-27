@@ -34,6 +34,8 @@ export class AppComponent {
         await this.delay()
     }
 
-    window.open(this.callbackUrl);
+    if(this.callbackUrl){
+      window.open(this.callbackUrl);
+    }
   }
 }
