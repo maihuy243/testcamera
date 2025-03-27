@@ -37,7 +37,11 @@ export class AppComponent {
 
     if(this.callbackUrl){
       const random = Math.random().toFixed(5)
-      window.open(this.callbackUrl + `?ramdom=${random}`);
+      console.log('Open callback');
+      // window.open(this.callbackUrl + `?ramdom=${random}`);
+      setTimeout(() => {
+        window.location.href = this.callbackUrl + `?ramdom=${random}`;
+      }, 1000);
     }
   }
 }
